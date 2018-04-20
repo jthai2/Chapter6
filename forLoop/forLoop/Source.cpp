@@ -1,4 +1,4 @@
-//forLoop 1 to 10
+//forLoop 1 through 10 to 10 through 1
 //4/19/18
 //Jimmy Thai
 

@@ -11,11 +11,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6CE563BE-E953-4EA0-A819-D802972D655F}</ProjectGuid>
+    <ProjectGuid>{E222FF33-3505-4FB8-9152-2557DCC549DF}</ProjectGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>forLoop</RootNamespace>
-    <ProjectName>forLoopAscendingDescending</ProjectName>
+    <RootNamespace>randomNumberGenerator110</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
