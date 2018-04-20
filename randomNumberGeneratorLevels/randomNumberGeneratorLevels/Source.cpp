@@ -16,10 +16,10 @@ void level1()
 {
 	srand(time(NULL));
 
-	secret = rand() % 10 + 1;
+	secret = rand() % 100 + 1;
 
 	do{
-		std::cout << "Please enter a number between 1-10>>>" << std::endl;
+		std::cout << "Please enter a number between 1-100>>>" << std::endl;
 		std::cin >> numChoice;
 
 		if (numChoice > secret)
