@@ -6,15 +6,13 @@
 
 int main()
 {
-	for (int i = 1; i < 11; i++)
-	{
-		std::cout << "Count up in " << i << std::endl;
-	}
 	for (int x = 10; x > 0; x--)
 	{
 		std::cout << "Count down in " << x << std::endl;
-
 	}
+	
+	std::cout << "Lift Off!" << std::endl;
+
 	system("pause");
 	return 0;
 }
