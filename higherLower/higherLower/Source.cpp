@@ -15,7 +15,7 @@ int main()
 	int secret;
 	/* initialize random seed: */
 	srand(time(NULL));
-	/* generate secret number between 1 and 10: */
+	/* generate secret number between 1 and 30: */
 	secret = rand() % 30 + 1;
 
 	do{

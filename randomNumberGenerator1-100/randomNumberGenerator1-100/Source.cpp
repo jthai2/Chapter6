@@ -1,6 +1,9 @@
+//Random Number Generator 1-100 High Lower... Count number of responses
+
 #include<random>
 #include<time.h>
 #include<iostream>
+
 int main()
 {
 	char userPlayAgain;
@@ -26,7 +29,7 @@ int main()
 			goto guessAgain;
 		}
 		else
-			std::cout << "You guessed the number! Congratulations! Game Over. \n \n";
+			std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
 		std::cout << "You have " << n - 1 << " games left." << std::endl;
 	}
 	std::cout << "Would you like to play again? 'Y' or 'N' " << std::endl;

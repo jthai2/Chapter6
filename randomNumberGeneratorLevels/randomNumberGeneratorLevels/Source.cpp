@@ -1,114 +1,117 @@
-//Random Number Generator Levels
-//04/19/18
+//Random Number Generator With Levels
+//04/24/18
 //Jimmy Thai
 
 #include <iostream>
+#include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <random>
+#include <string>
 
-int count = 0;
 int numChoice;
 int secret;
 
-void level1()
+int r;
+
+int level1(int count)
 {
-	srand(time(NULL));
+	do
+	{
+		srand(time(NULL));
 
-	secret = rand() % 100 + 1;
+		secret = rand() % 10 + 1;
 
-	do{
-		std::cout << "Please enter a number between 1-100>>>" << std::endl;
+		std::cout << "Please pick a number between 1-10>>>" << std::endl;
 		std::cin >> numChoice;
 
 		if (numChoice > secret)
 		{
-			std::cout << "The number you have chosen is too high!, guess again loser" << std::endl;
+			std::cout << "The number you have chose is too high!, guess again>>>" << std::endl;
 			count = count + 1;
 		}
 		else if (numChoice < secret)
 		{
-			std::cout << "The number you have chosen is too low!, guess again loser" << std::endl;
+			std::cout << "The number you have chosen is too low!, guess again>>>" << std::endl;
+			count = count + 1;
 		}
-
-	} while (numChoice != secret);
-
-	std::cout << "Congratulations! It took you " << count << " tries!" << std::endl;
+	} while (numChoice != secret || count == 10);
+	r = count;
+	return r;
 }
-
-void level2()
+int level2(int count)
 {
-	srand(time(NULL));
+	do
+	{
+		srand(time(NULL));
 
-	secret = rand() % 100 + 1;
+		secret = rand() % 100 + 1;
 
-	do{
-		std::cout << "Please enter a number between 1-100>>>" << std::endl;
+		std::cout << "Please pick a number between 1-100>>>" << std::endl;
 		std::cin >> numChoice;
 
 		if (numChoice > secret)
 		{
-			std::cout << "The number you have chosen is too high!, guess again loser" << std::endl;
+			std::cout << "The number you have chose is too high!, guess again>>>" << std::endl;
 			count = count + 1;
 		}
 		else if (numChoice < secret)
 		{
-			std::cout << "The number you have chosen is too low!, guess again loser" << std::endl;
+			std::cout << "The number you have chosen is too low!, guess again>>>" << std::endl;
+			count = count + 1;
 		}
-
-	} while (numChoice != secret);
-
-	std::cout << "Congratulations! It took you " << count << " tries!" << std::endl;
+	} while (numChoice != secret || count == 100);
+	r = count;
+	return r;
 }
-
-void level3()
+int level3(int count)
 {
-	srand(time(NULL));
+	do
+	{
+		srand(time(NULL));
 
-	secret = rand() % 1000 + 1;
+		secret = rand() % 1000 + 1;
 
-	do{
-		std::cout << "Please enter a number between 1-1000>>>" << std::endl;
+		std::cout << "Please pick a number between 1-1000>>>" << std::endl;
 		std::cin >> numChoice;
 
 		if (numChoice > secret)
 		{
-			std::cout << "The number you have chosen is too high!, guess again loser" << std::endl;
+			std::cout << "The number you have chose is too high!, guess again>>>" << std::endl;
 			count = count + 1;
 		}
 		else if (numChoice < secret)
 		{
-			std::cout << "The number you have chosen is too low!, guess again loser" << std::endl;
+			std::cout << "The number you have chosen is too low!, guess again>>>" << std::endl;
+			count = count + 1;
 		}
-
-	} while (numChoice != secret);
-
-	std::cout << "Congratulations! It took you " << count << " tries!" << std::endl;
+	} while (numChoice != secret || count == 1000);
+	r = count;
+	return r;
 }
+
 
 int main()
 {
-	int levelSelector;
+	int level1Count = 1, level2Count = 1, level3Count = 1, level1CountTotal;
 
-	std::cout << "Please select a level. [1] = Easy, [2] = Medium, [3] = Hard>>> " << std::endl;
-	std::cin >> levelSelector;
+	int levelChoice;
 
-	switch (levelSelector)
+	for (int i = 0; 1 < 5; ++i)
 	{
-	case 1:
-		level1();
-		break;
-	case 2:
-		level2();
-		break;
-	case 3:
-		level3();
-		break;
-	default:
-		break;
+		std::cout << "Choose your level>>>" << std::endl;
+		std::cin >> levelChoice;
+		switch (levelChoice)
+		{
+		case 1:
+			level1(level1Count);
+			break;
+		case 2:
+			level2(level2Count);
+		case 3:
+			level3(level3Count);
+		default:
+			break;
+		}
+		level1CountTotal = level1Count + level2Count + level3Count;
 	}
-
-	system("pause");
-	return 0;
 }
