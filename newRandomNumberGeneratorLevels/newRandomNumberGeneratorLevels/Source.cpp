@@ -27,7 +27,7 @@ playAgain:
 		guessAgainSecret:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-4)" << std::endl;
+			std::cout << "Guess what the random number is [1-4]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -40,7 +40,7 @@ playAgain:
 				goto guessAgainSecret;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 			std::cout << "You have " << n - 1 << " games remaining." << std::endl;
 		}
 		if (amountAttempted < 10)
@@ -50,7 +50,7 @@ playAgain:
 		guessAgainSecretSpecial:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-3)" << std::endl;
+			std::cout << "Guess what the random number is [1-3]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -63,11 +63,11 @@ playAgain:
 				goto guessAgainSecretSpecial;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 		}
 	}
 	amountAttempted = 0;
-	std::cout << "What difficulty would you like to do? (1 = easy, 2 = medium, 3 = hard)" << std::endl;
+	std::cout << "What difficulty would you like to do? [1 = easy, 2 = medium, 3 = hard]" << std::endl;
 	std::cin >> difficulty;
 	switch (difficulty)
 	{
@@ -79,7 +79,7 @@ playAgain:
 		guessAgain:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-10)" << std::endl;
+			std::cout << "Guess what the random number is [1-10]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -92,7 +92,7 @@ playAgain:
 				goto guessAgain;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 			std::cout << "You have " << n - 1 << " games remaining." << std::endl;
 		}
 	case 2:
@@ -104,7 +104,7 @@ playAgain:
 		guessAgain2:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-100)" << std::endl;
+			std::cout << "Guess what the random number is [1-100]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -117,7 +117,7 @@ playAgain:
 				goto guessAgain2;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 			std::cout << "You have " << n - 1 << " games remaining." << std::endl;
 		}
 	case 3:
@@ -129,7 +129,7 @@ playAgain:
 		guessAgain3:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-1000)" << std::endl;
+			std::cout << "Guess what the random number is [1-1000]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -142,7 +142,7 @@ playAgain:
 				goto guessAgain3;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 			std::cout << "You have " << n - 1 << " games remaining." << std::endl;
 		}
 	}
@@ -155,7 +155,7 @@ playAgain:
 		guessAgainSpecial:
 			amountAttempted++;
 			std::cout << "Attempt number: " << amountAttempted << "." << std::endl;
-			std::cout << "Guess what the random number is (1-3)" << std::endl;
+			std::cout << "Guess what the random number is [1-3]" << std::endl;
 			std::cin >> userGuess;
 			if (userGuess > randomNumber)
 			{
@@ -168,7 +168,7 @@ playAgain:
 				goto guessAgainSpecial;
 			}
 			else
-				std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
+				std::cout << "You guessed the number! Game Over." << std::endl;
 		}
 	}
 	std::cout << "Would you like to play again? 'Y' or 'N' " << std::endl;
