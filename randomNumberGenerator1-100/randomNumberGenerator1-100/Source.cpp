@@ -9,8 +9,11 @@
 int main()
 {
 	char userPlayAgain;
+
 	int userGuess, amountAttempted;
+
 	playAgain:
+
 	for (int n = 5; n > 0; n--)
 	{
 		srand(time(0));
@@ -34,9 +37,11 @@ int main()
 			std::cout << "You guessed the number! Congratulations! Game Over." << std::endl;
 		std::cout << "You have " << n - 1 << " games left." << std::endl;
 	}
+
 	std::cout << "Would you like to play again? 'Y' or 'N' " << std::endl;
 	std::cin >> userPlayAgain;
 	amountAttempted = 0;
+
 	if (tolower(userPlayAgain) == 'y')
 		goto playAgain;
 	system("pause");
