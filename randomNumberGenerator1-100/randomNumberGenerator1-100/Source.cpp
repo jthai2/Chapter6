@@ -1,8 +1,10 @@
 //Random Number Generator 1-100 High Lower... Count number of responses
+//04/25/18
+//Jimmy Thai
 
-#include<random>
 #include<time.h>
 #include<iostream>
+#include<random>
 
 int main()
 {
