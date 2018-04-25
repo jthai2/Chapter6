@@ -13,7 +13,7 @@ int main()
 	for (int n = 0; n < 10; n++)
 	{
 		srand(time(NULL));
-		randomNumber = rand() % 6 + 1;
+		randomNumber = rand() % 20 + 1;
 
 		std::cout << randomNumber << std::endl;
 	}

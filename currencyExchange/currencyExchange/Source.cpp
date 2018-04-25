@@ -11,34 +11,31 @@ double currency;
 
 int main()
 {
-	std::cout << "How much money are you wanting to convert? >>> \n";
+	std::cout << "How much money do you want to convert?>>>" << std::endl;
 	std::cin >> currency;
 
 	CurrencyConversion:
 
-	std::cout << "What are you looking to convert to? (CanadianDollar, Euro, Rupee, Yen, Peso, Rand, Pound) \n";
+	std::cout << "What currency do you want to convert? [CanadianDollar, Euro, Rupee, Yen, Peso, Rand, or Pound]" << std::endl;
 	std::cin >> currencyConvert;
 
 	if (currencyConvert == "CanadianDollar")
-		std::cout << "Your currency is worth: " << currency * canadianDollar << " canadian dollars. \n";
+		std::cout << "Your currency converted is: " << currency * canadianDollar << " canadian dollars." << std::endl;
 	else if (currencyConvert == "Euro")
-		std::cout << "Your currency is worth: " << currency * Euro << " Euros. \n";
+		std::cout << "Your currency converted is: " << currency * Euro << " Euros." << std::endl;
 	else if (currencyConvert == "Rupee")
-		std::cout << "Your currency is worth: " << currency * indianRupee << " Rupees. \n";
+		std::cout << "Your currency converted is: " << currency * indianRupee << " Rupees." << std::endl;
 	else if (currencyConvert == "Yen")
-		std::cout << "Your currency is worth: " << currency * japaneseYen << " Yen. \n";
+		std::cout << "Your currency converted is: " << currency * japaneseYen << " Yen." << std::endl;
 	else if (currencyConvert == "Peso")
-		std::cout << "Your currency is worth: " << currency * mexicanPeso << " Pesos. \n";
+		std::cout << "Your currency converted is: " << currency * mexicanPeso << " Pesos." << std::endl;
 	else if (currencyConvert == "Rand")
-		std::cout << "Your currency is worth: " << currency * southAfricanRand << " Rands. \n";
+		std::cout << "Your currency converted is: " << currency * southAfricanRand << " Rands." << std::endl;
 	else if (currencyConvert == "Pound")
-		std::cout << "Your currency is worth: " << currency * britishPound << " Pounds. \n";
+		std::cout << "Your currency converted is: " << currency * britishPound << " Pounds." << std::endl;
 	else
 		goto CurrencyConversion;
+
 	system("pause");
 	return 0;
-
-
-
-
 }
